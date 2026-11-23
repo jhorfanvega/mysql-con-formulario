@@ -1,56 +1,106 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
     <title>Formulario de usuario</title>
+
+    <link rel="stylesheet" href="estiles.css">
 </head>
 
 <body>
 
-    <h1>USUARIO</h1>
+    <div class="Formulario">
 
-    <form action="#" method="post">
+        <h1>REGISTRO DE USUARIO</h1>
 
-        <label for="nombre">NOMBRE:</label>
-        <input type="text" id="nombre" name="nombre" required>
+        <form action="formu.php" method="post">
 
-        <br><br>
+            <!-- Campo para el nombre -->
+            <label for="nombre">NOMBRE COMPLETO:</label>
 
-        <label for="contrasena">CONTRASEÑA:</label>
-        <input type="password" id="contrasena" name="contrasena" required>
+            <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                placeholder="Escriba su nombre"
+                minlength="3"
+                maxlength="100"
+                required
+            >
 
-        <br><br>
+            <br><br>
 
-        <label for="genero">GÉNERO:</label>
-        <select id="genero" name="genero" required>
-            <option value="">Seleccione una opción</option>
-            <option value="masculino">Masculino</option>
-            <option value="femenino">Femenino</option>
-            <option value="otro">Otro</option>
-        </select>
+            <!-- Campo para la contraseña -->
+            <label for="contrasena">CONTRASEÑA:</label>
 
-        <br><br>
+            <input
+                type="password"
+                id="contrasena"
+                name="contrasena"
+                placeholder="Escriba su contraseña"
+                minlength="6"
+                maxlength="100"
+                required
+            >
 
-        <label for="correo">CORREO ELECTRÓNICO:</label>
-        <input type="email" id="correo" name="correo" required>
+            <br><br>
 
-        <br><br>
+            <!-- Selección de género -->
+            <label for="genero">GÉNERO:</label>
 
-        <label for="materia">MATERIA:</label>
-        <select id="materia" name="materia" required>
-            <option value="">Seleccione una materia</option>
-            <option value="programacion">Programación</option>
-            <option value="base_de_datos">Base de datos</option>
-            <option value="ingles">Inglés</option>
-            <option value="matematicas">Matemáticas</option>
-        </select>
+            <select id="genero" name="genero" required>
+                <option value="">Seleccione una opción</option>
+                <option value="masculino">Masculino</option>
+                <option value="femenino">Femenino</option>
+                <option value="otro">Otro</option>
+                <option value="prefiero_no_decirlo">
+                    Prefiero no decirlo
+                </option>
+            </select>
 
-        <br><br>
+            <br><br>
 
-        <input type="submit" value="REGISTRAR">
+            <!-- Campo para el correo -->
+            <label for="correo">CORREO ELECTRÓNICO:</label>
 
-    </form>
+            <input
+                type="email"
+                id="correo"
+                name="correo"
+                placeholder="ejemplo@correo.com"
+                maxlength="150"
+                required
+            >
+
+            <br><br>
+
+            <!-- Selección de materia -->
+            <label for="materia">MATERIA:</label>
+
+            <select id="materia" name="materia" required>
+                <option value="">Seleccione una materia</option>
+                <option value="programacion">Programación</option>
+                <option value="base_de_datos">Base de datos</option>
+                <option value="ingles">Inglés</option>
+                <option value="matematicas">Matemáticas</option>
+            </select>
+
+            <br><br>
+
+            <!-- Botón para enviar la información -->
+            <input type="submit" value="REGISTRAR">
+
+        </form>
+
+    </div>
 
 </body>
+
 </html>
